@@ -21,11 +21,13 @@ ClozeCard.prototype.full = function() {
 	console.log(clozeText);
 }
 
-var card1 = new ClozeCard("question1 _____ rest of answer", "answer1");
-var card2 = new ClozeCard("question1 _____ rest of answer", "answer2");
+var card1 = new ClozeCard("_____ is the best dog in the world.", "wrigley");
+var card2 = new ClozeCard("Wrigley's favorite toy is a _____.", "tennis ball");
+var card3 = new ClozeCard("Black labs _____ more than most dogs.", "shed")
 
 cards.push(card1);
 cards.push(card2);
+cards.push(card3);
 
 function studyCards() {
 	if(cardCount < cards.length) {
@@ -45,9 +47,9 @@ function studyCards() {
 				studyCards();
 			} else {
 				//if user's answer doesn't match cloze answer, log incorrect then show full sentence
-				console.log();
 				console.log("*** Incorrect ***");
 				cards[cardCount].full();
+				console.log();
 				cardCount++
 				// continue recursion
 				studyCards();
