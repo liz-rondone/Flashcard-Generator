@@ -23,11 +23,13 @@ ClozeCard.prototype.full = function() {
 
 var card1 = new ClozeCard("_____ is the best dog in the world.", "wrigley");
 var card2 = new ClozeCard("Wrigley's favorite toy is a _____.", "tennis ball");
-var card3 = new ClozeCard("Black labs _____ more than most dogs.", "shed")
+var card3 = new ClozeCard("Labs _____ more than most dogs.", "shed")
+var card4 = new ClozeCard("On the cuteness scale of 1 to 10 (1 being the ugliest) Wrigley is a _____.", "100")
 
 cards.push(card1);
 cards.push(card2);
 cards.push(card3);
+cards.push(card4);
 
 function studyCards() {
 	if(cardCount < cards.length) {
